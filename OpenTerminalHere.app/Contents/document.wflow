@@ -51,7 +51,7 @@
 				<key>ActionParameters</key>
 				<dict>
 					<key>source</key>
-					<string>-- Get the current directory in Finderon run	tell application "Finder"		set _cwd to POSIX path of (folder of the front window as alias)	end tell	CD_to(_cwd)end run-- Change directory in iTerm (version &gt;= 3)on CD_to(_cwd)	tell application "iTerm"		activate				try			set _window to first window		on error			set _window to (create window with profile "Default")		end try				tell _window			-- Open a new tab			tell (create tab with default profile)				tell current session					-- Execute the command directly					write text "cd " &amp; quoted form of _cwd &amp; "; clear"				end tell			end tell		end tell	end tellend CD_to</string>
+					<string>-- Get the current directory in Finderon run	tell application "Finder"		set _cwd to POSIX path of (folder of the front window as alias)	end tell	open_new_window(_cwd)end run-- Open a new window in iTerm and change directoryon open_new_window(_cwd)	tell application "iTerm"		activate		delay 1 -- Wait for iTerm to activate and possibly open a default window		set _window to (create window with profile "Default")		tell _window			tell current session				-- Change directory to the target path				write text "cd " &amp; quoted form of _cwd			end tell		end tell	end tellend open_new_window</string>
 				</dict>
 				<key>BundleIdentifier</key>
 				<string>com.apple.Automator.RunScript</string>
@@ -105,7 +105,7 @@ end run</string>
 				<key>isViewVisible</key>
 				<integer>1</integer>
 				<key>location</key>
-				<string>228.500000:495.000000</string>
+				<string>228.500000:315.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run AppleScript.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>

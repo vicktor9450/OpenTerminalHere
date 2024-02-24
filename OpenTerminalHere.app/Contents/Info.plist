@@ -34,11 +34,11 @@
 	<key>CFBundleIconFile</key>
 	<string>ApplicationStub</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.apple.automator.OpenTerminalHere-copy</string>
+	<string>com.apple.automator.OpenTerminalHere</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>OpenTerminalHere copy</string>
+	<string>OpenTerminalHere</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
